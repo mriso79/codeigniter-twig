@@ -1,0 +1,8 @@
++ Codeigniter + Twig + simple + template + intelitica
+
+Lembre-se de adicionar em application/cache o diretorio twig
+Deve ser writable.
+
+application/cache/twig/
+
+

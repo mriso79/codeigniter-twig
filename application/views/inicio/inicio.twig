@@ -1,0 +1,41 @@
+{% extends "layout/base.twig" %}
+
+{% block content %}
+   <div class="container">
+       <div class="jumbotron topmargin">
+           <h1>Painel: Grupo Styllus</h1>
+           <p>Bem Vindo ao painel administrativo. Caso você tenha acesso, utilize o login abaixo:</p>
+            <br/>
+           <form class="form-horizontal" role="form" action="{{ base_url() }}login/" method="post">
+               <div class="form-group">
+                   <label for="inputEmail" class="col-sm-1 control-label adjust">Email</label>
+                   <div class="col-sm-6">
+                       <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+                   </div>
+               </div>
+               <div class="form-group">
+                   <label for="inputPassword" class="col-sm-1 control-label adjust">Senha</label>
+                   <div class="col-sm-6">
+                       <input type="password" class="form-control" name="senha" id="inputPassword" placeholder="Senha">
+                   </div>
+               </div>
+               <div class="form-group">
+                   <div class="col-sm-offset-1 col-sm-6">
+                       <button type="submit" class="btn btn-primary btn-lg">Conectar</button>
+                   </div>
+               </div>
+           </form>
+
+           {% if event == 'erro' %}
+               <div class="alert alert-danger">Acesso negado. Verifique os dados e tente novamente.</div>
+           {% endif %}
+       </div>
+   </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/public/js/core.js"></script>
+    <script type="text/javascript">
+        var Core = new Core();
+    </script>
+{% endblock %}

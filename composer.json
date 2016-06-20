@@ -1,0 +1,9 @@
+{
+    "name": "intelitica",
+    "authors": [{"name":"Marcos Riso", "email":"mriso@intelitica.com"}],
+    "require":{
+        "twig/twig": "1.13.*@dev",
+        "twig/extensions": "1.0.*@dev"
+    }
+
+}
